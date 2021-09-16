@@ -1,0 +1,59 @@
+apiVersion: v1
+entries:
+  postgresql:
+  - apiVersion: v1
+    appVersion: 11.7.0
+    created: "2021-09-16T16:16:07.02918983+02:00"
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 0add9e54dad92494348563a8676cf126274d86e6a7cdc3a541f5a556fe2b8e90
+    home: https://www.postgresql.org/
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    urls:
+    - https://raw.githubusercontent.com/Mikaciu/charts-sonarqube/main/charts/postgresql-8.6.4.tgz
+    version: 8.6.4
+  sonarqube:
+  - apiVersion: v1
+    appVersion: 8.5.1-community
+    created: "2021-09-16T16:16:07.027047666+02:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.6.4
+    description: SonarQube is an open sourced code quality scanning tool
+    digest: 38916db30456a68cc0cba21a6fa434a1da395f23d35194f57bdc173c9a6b33be
+    home: https://www.sonarqube.org/
+    icon: https://www.sonarqube.org/assets/logo-31ad3115b1b4b120f3d1efd63e6b13ac9f1f89437f0cf6881cc4d8b5603a52b4.svg
+    keywords:
+    - coverage
+    - security
+    - code
+    - quality
+    maintainers:
+    - email: rjkernick@gmail.com
+      name: rjkernick
+    - email: tsiddique@live.com
+      name: tsiddique
+    name: sonarqube
+    sources:
+    - https://github.com/SonarSource/docker-sonarqube
+    urls:
+    - https://raw.githubusercontent.com/Mikaciu/charts-sonarqube/main/sonarqube-9.8.1.tgz
+    version: 9.8.1
+generated: "2021-09-16T16:16:07.022725549+02:00"
